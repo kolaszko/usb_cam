@@ -271,8 +271,8 @@ public:
         return false;
       }
 
-      // Flip image
-      cv::flip(cv_ptr->image, cv_ptr_flip->image, img_flip_code_);
+      // Rotate image
+      cv::rotate(cv_ptr->image, cv_ptr_flip->image, img_flip_code_);
 
       // convert image back to ROS MSG
       cv_ptr_flip->toImageMsg(img_);
